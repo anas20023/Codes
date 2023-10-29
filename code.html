@@ -13,44 +13,16 @@
     </style>
   </head>
   <body>
-    <h1 >This is A Test Code For Js</h1>
+    <h1>This is A Test Code For Js</h1>
     <script>
       let a;
-      a = prompt("Enter Your Number : ");
+      a = prompt("Enter a Number To Check ");
       a = parseInt(a);
 
-      if (a > 10 && a < 0) {
-        alert("You Are Noy Luckey !!!!");
+      if (a % 2 == 0 && a % 3 == 0) {
+        alert("The Number is Divisible by 2 and 3");
       } else {
-        switch (a) {
-          case 1:
-            alert("You Are Luckey !!!!");
-            break;
-          case 2:
-            alert("You Are Luckey !!!!");
-            break;
-          case 3:
-            alert("You Are Luckey !!!!");
-            break;
-          case 4:
-            alert("You Are Luckey !!!!");
-            break;
-          case 5:
-            alert("You Are Luckey !!!!");
-            break;
-          case 6:
-            alert("You Are Luckey !!!!");
-          case 7:
-            alert("You Are Luckey !!!!");
-            break;
-          case 8:
-            alert("You Are Luckey !!!!");
-            break;
-          case 9:
-            alert("You Are Luckey !!!!");
-          default:
-            alert("You Are Noy Luckey !!!!");
-        }
+        alert("Not Divisible By 2 and 3");
       }
     </script>
   </body>
