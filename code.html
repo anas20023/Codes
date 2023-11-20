@@ -4,25 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="num_grade.js"></script>
     <style>
       h1 {
-        color: red;
+        color: #232323;
         text-align: center;
         transition: cubic-bezier(1, 0, 0, 1);
+      }
+      button
+      {
+        color: #ffff;
+        border: none;
+        padding: 12px 15px;
+        font-family: poppins;
+        border-radius: 5px;
+        background-color: #232323;
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: cubic-bezier(1, 0, 0, 1);
+
       }
     </style>
   </head>
   <body>
-    <h1>This is A Test Code For Js</h1>
-    <script>
-      let a;
-      while (true) {
-        a = prompt("Enter your Favourite Name");
-        if (a == "anas") {
-          alert("You Have Entered a Correct Name");
-          break;
-        }
-      }
-    </script>
+    <h1>Enter Your Number and Know the Grade</h1>
+    <button onclick="marks()">Know The Grade</button>
   </body>
 </html>
