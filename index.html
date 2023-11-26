@@ -3,34 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Converter</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="./upr_twr.js"></script>
+    <script src="script.js"></script>
+    <title>Anas Ibn Belal</title>
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <svg>
-        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
-          Converter
-        </text>
-      </svg>
-    </div>
-    <div class="container">
-      <input
-        type="text"
-        onblur="get_text()"
-        name="text"
-        id="text"
-        placeholder="Enter Text"
-        required />
-      <div class="btns">
-        <button type="submit" onclick="Upr()" class="btn">UpperCase</button>
-        <button type="submit" onclick="Lwr()" class="btn">LowerCase</button>
-        <button type="submit" onclick="Lnt()" class="btn">Legnth</button>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <a id="cvd" href="#">Download CV</a>
+      </nav>
+    </header>
+    <div class="container_top">
+      <div class="text">
+        <h1>Hi, I'm Anas Ibn Belal</h1>
+        <p class="top_p">
+          I'm a <span class="wd">Web Developer</span> and <span class="des">Designer</span> from
+          Bangladesh. <br>I have a passion for web design and love to create for web
+          and mobile devices.
+        </p>
+        <a class="hire" href="#">Hire Me</a>
       </div>
-      <h2 id="change"></h2>
-      <button onclick="Clr()" class="clear">Clear All</button>
-      <a href="https://github.com/anas20023" target="_blank" rel="noopener" class="follow_btn">Follow Me on Github</a>
+      <div class="img_div_top">
+        <img id="top_img" src="./bg.png" alt="This is an Example Image" />
+      </div>
     </div>
   </body>
 </html>
