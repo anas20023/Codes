@@ -5,12 +5,12 @@ function Gettext() {
 }
 
 function convert_Name() {
-  if (nspc.length == 0) {
+  lwrc = fname.toLowerCase();
+  nspc = lwrc.replaceAll(" ", "");
+  if (nspc.length == 0 || nspc =="") {
     alert("Dont Leave the Field Empty !!");
     document.getElementById("user_gen_T").innerHTML = "";
   } else {
-    lwrc = fname.toLowerCase();
-  nspc = lwrc.replaceAll(" ", "");
     document.getElementById("user_gen_T").innerHTML =
       "@" +
       nspc +
