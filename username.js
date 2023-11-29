@@ -12,11 +12,16 @@ function convert_Name() {
     alert("Don't leave the field empty!!");
     document.getElementById("user_gen_T").innerHTML = "";
   } else {
-    document.getElementById("user_gen_T").innerHTML =
-      "@" +
-      nspc +
-      Math.floor(Math.random() * 100 + 1) +
-      nspc.length +
-      Math.floor(Math.random() * 100 + 1);
+    if (nspc.length > 33) {
+      alert("Username too long!!");
+      document.getElementById("user_gen_T").innerHTML = "";
+    } else {
+      document.getElementById("user_gen_T").innerHTML =
+        "@" +
+        nspc +
+        Math.floor(Math.random() * 100 + 1) +
+        nspc.length +
+        Math.floor(Math.random() * 100 + 1);
+    }
   }
 }
