@@ -1,6 +1,8 @@
 var prep=document.getElementById("txt").innerHTML;
+var nxt;
 
 function Append()
 {
-    document.getElementById("txt").innerHTML=prep+" From Apna College !!";
+    nxt=prep+" From Apna College !!";
+    document.getElementById("txt").innerHTML=nxt;
 }
