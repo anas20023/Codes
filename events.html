@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="blabla">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,12 @@
 
 <body class="bg-gray-100 dark:bg-gray-900">
     <nav class="flex flex-row justify-between items-center mx-20 my-8">
-        <a class="text-gray-900 dark:text-white font-semibold text-2xl" href="#">Light Mode</a>
-        <button class="text-xl">
-            <i class="fa-solid fa-sun dark:hidden"></i>
-            <i class="fa-solid fa-moon" style="color: #ffffff;"></i>
-        </button>
+        <a id="heading" class="text-gray-900 dark:text-white font-semibold text-2xl" href="#">Light Mode</a>
+        <div class="flex flex-row justify-center items-center">
+            <i id="light" class="fa-solid fa-sun text-xl cursor-pointer text-gray-800"></i>
+            <i id="dark" class="fa-solid fa-moon text-xl cursor-pointer text-white hidden"></i>
+        </div>
+            
 
     </nav>
     <div
