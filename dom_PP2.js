@@ -8,5 +8,18 @@ add_btn.style.margin = "0 auto";
 
 function Append_ToStart() {
   let top = document.querySelector("body");
-  top.after(add_btn);
+  top.before(add_btn);
 }
+function Delete() {
+  add_btn.remove();
+}
+
+// Ques Task_2
+
+let para = document.querySelector("p").getAttribute("class");
+
+function Add_st()
+{
+    para.classList.add("newpara");
+}
+console.log(para);
