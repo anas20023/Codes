@@ -1,6 +1,11 @@
 module.exports = {
+  content: [
+    "./components/**/*.{html,js}",
+    "./pages/**/*.{html,js}",
+    "./events.html",
+  ],
   purge: [],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {},
   },
@@ -9,4 +14,3 @@ module.exports = {
   },
   plugins: [],
 };
-
