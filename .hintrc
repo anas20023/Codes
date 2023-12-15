@@ -11,6 +11,7 @@
         "button-name": "off"
       }
     ],
-    "compat-api/css": "off"
+    "compat-api/css": "off",
+    "axe/parsing": "off"
   }
 }
