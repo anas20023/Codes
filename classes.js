@@ -45,17 +45,25 @@
 //   }
 // }
 
-
 // let Anas= new CSE("Anas",372,95);
 // console.log(Anas);
 // console.log(Anas.CPGA(3.95));
 // let Sifat=new CSE("Miel Mahmud Sifat",368,99);
 // console.log(Sifat);
 
-
 // Inheritation
 
-let Obj_1={
-
-
+class Class_1 {
+  Fn_1(myname) {
+    console.log(`My Name is = ${myname}`);
+  }
 }
+
+class Child_Class extends Class_1 {
+  Fn_2(alerttt) {
+    alert(alerttt);
+  }
+}
+
+let obj = new Child_Class;
+console.log(obj);
