@@ -51,19 +51,7 @@
 // let Sifat=new CSE("Miel Mahmud Sifat",368,99);
 // console.log(Sifat);
 
-// Inheritation
 
-class Class_1 {
-  Fn_1(myname) {
-    console.log(`My Name is = ${myname}`);
-  }
-}
-
-class Child_Class extends Class_1 {
-  Fn_2(alerttt) {
-    alert(alerttt);
-  }
-}
-
-let obj = new Child_Class;
-console.log(obj);
+let Sgn_div=document.querySelector("#main_div");
+let signup_top=document.querySelector("#div_sgn");
+let sgn_btn_1=document.querySelectorAll("#btn_1");

@@ -5,12 +5,7 @@
   "hints": {
     "axe/forms": "off",
     "no-inline-styles": "off",
-    "axe/name-role-value": [
-      "default",
-      {
-        "button-name": "off"
-      }
-    ],
+    "axe/name-role-value": "off",
     "compat-api/css": "off",
     "axe/parsing": "off"
   }
