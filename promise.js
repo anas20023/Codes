@@ -20,6 +20,10 @@ function Print_Number(n) {
 }
 
 (async function () {
-  await Print_Number(10);
-  await Print_Number(11);
+  let n = parseInt(prompt("Enter Number"));
+  for (let i = 1; i <= n; i++) {
+    console.log(`Fetching Data ${i}.......`);
+    await Print_Number(i);
+  }
+  console.log("Successfully Completed !!");
 })();
