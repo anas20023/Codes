@@ -13,7 +13,7 @@
 function Print_Number(n) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Data of ${n}`);
+      document.getElementById("gett").innerHTML += `Data of ${n} <br>`;
       resolve("ok");
     }, 3000);
   });
@@ -22,8 +22,8 @@ function Print_Number(n) {
 (async function () {
   let n = parseInt(prompt("Enter Number"));
   for (let i = 1; i <= n; i++) {
-    console.log(`Fetching Data ${i}.......`);
+    document.getElementById("getting").innerText = `Fetching Data ${i}.......`;
     await Print_Number(i);
   }
-  console.log("Successfully Completed !!");
+  document.getElementById("getting").innerText = "Successfully Completed !!";
 })();
