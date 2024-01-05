@@ -1,25 +1,62 @@
-import subprocess
-import re
+import pyautogui
+import pyperclip
+import time
 
-def connect_to_hidden_wifi(ssid, password):
-    try:
-        network_interfaces = subprocess.check_output(['netsh', 'wlan', 'show', 'interfaces']).decode('utf-8', 'ignore')
-        interface_name = re.search(r'(?<=: )\w+', network_interfaces)
+def get_center(image_path, confidence=0.8):
+    position = pyautogui.locateCenterOnScreen(image_path, confidence=confidence)
+    return position if position else None
 
-        if interface_name:
-            subprocess.run(['netsh', 'wlan', 'connect', 'name=', ssid, 'SSID=', ssid, 'interface="', interface_name.group(0), '"'], check=True)
-            return True
+def click_and_get_position(image_path, offset_y=0):
+    position = get_center(image_path)
+    if position:
+        x, y = position
+        pyautogui.click(x, y + offset_y)
+        return x, y
+    else:
+        print(f"Error: {image_path} not found on the screen.")
+        return None
 
-    except Exception as e:
-        print(f"Error occurred: {str(e)}")
-        return False
+def get_wifi_passwords():
+    passwords = []
+    max_attempts = 10
+    attempts = 0
 
-def main():
-    ssid = "Your_Hidden_SSID"
-    password = "Your_Password"
+    while attempts < max_attempts:
+        # Click on the network icon
+        network_icon_position = click_and_get_position('network_icon.png')
+        if not network_icon_position:
+            break
 
-    if connect_to_hidden_wifi(ssid, password):
-        print(f"Connected to {ssid} successfully.")
+        # Check if there is a network with a red cross (not connected)
+        not_connected_network_position = click_and_get_position('not_connected_network.png', offset_y=-20)
+        if not not_connected_network_position:
+            break
 
-if __name__ == "__main__":
-    main()
+        # Click on the network name to view the password
+        pyautogui.click(*not_connected_network_position)
+
+        # Wait for the password dialog to appear
+        time.sleep(1)
+
+        # Click on the password field to select it
+        password_field_position = (250, 320)
+        pyautogui.click(*password_field_position)
+
+        # Copy the password
+        pyautogui.hotkey('ctrl', 'c')
+        password = pyperclip.paste()
+        passwords.append(password)
+
+        # Click on the OK button
+        ok_button_position = (300, 300)
+        pyautogui.click(*ok_button_position)
+
+        attempts += 1
+    else:
+        print("Max attempts reached. Exiting loop.")
+
+    return passwords
+
+# Example usage
+wifi_passwords = get_wifi_passwords()
+print("Wi-Fi Passwords:", wifi_passwords)
